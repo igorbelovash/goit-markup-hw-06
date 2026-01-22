@@ -68,8 +68,9 @@ img {
 }
 
 .container {
-    max-width: 1158px;
-    padding: 0 15px;
+    width: 100%;
+    max-width: 320px;
+    padding: 0 16px;
     margin: 0 auto;
 }
 
@@ -233,32 +234,54 @@ img {
     background-color: #404BBF;
 }
 
+/* --------- Features Section --------- */
+
+.features {
+    padding: 96px 0;
+}
+
 .features-title {
     text-align: left;
 }
 
 .features-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .features-item {
-    width: calc((100% - 72px) / 4);
+    width: 100%;
 }
 
 .features-item .icon-box {
     border: 1px solid #8E8F99;
     border-radius: 4px;
     background: #F4F4FD;
-    display:flex;
     justify-content: center;
     align-items: center;
     height: 112px;
+    display: none;
 }
 
 
 .features-subtitle {
-    margin: 8px 0;
+    /* margin: 8px 0; */
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2E2F42;
+}
+
+.features-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
 .team {
@@ -736,4 +759,64 @@ img {
 .modal-send:hover,
 .modal-send:focus {
     background-color: #404BBF;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .container {
+        max-width: 768px;
+    }
+
+    /* --------- Features Section --------- */
+
+    .features-list {
+        gap: 72px 24px;
+    }
+
+    .features-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .features-subtitle {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+
+    .container {
+        max-width: 1158px;
+    }
+    
+    /* --------- Features Section --------- */
+
+    .features-list {
+        gap: 24px;
+    }
+
+    .features-item {
+        width: calc((100% - 72px) / 4);
+    }
+
+    .features-item .icon-box {
+        display: flex;
+    }
+
+    .features-subtitle {
+        margin: 8px 0;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2E2F42;
+    }
+    
+    .features-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+    }
 }
