@@ -397,14 +397,17 @@ img {
     margin-bottom: 8px;
 }
 
+/* --------- Footer --------- */
+
 .footer {
     background-color: #2E2F42;
-    padding: 100px 0;
+    padding: 96px 0;
 }
 
 .footer-wrapper {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .footer-link {
@@ -417,11 +420,12 @@ img {
     color: #F4F4FD;
     margin-bottom: 16px;
     display: block;
+    text-align: center;
 }
 
 .footer-text {
     color: #F4F4FD;
-    max-width: 264px;
+    max-width: 288px;
 }
 
 .social-links-text {
@@ -430,10 +434,11 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
+    text-align: center;
 }
 
 .social-links-container {
-    margin-left: 120px;
+    margin: 0 auto;
 }
 
 .social-links {
@@ -458,9 +463,6 @@ img {
     background-color: #31D0AA;
 }
 
-.footer-subscribe-container {
-    margin-left: auto;
-}
 
 .subscribe-text {
     font-weight: 500;
@@ -468,18 +470,22 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
+    text-align: center;
 }
 
 .subscribe-form {
     margin-top: 16px;
     display:flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    gap: 16px;
 }
 
 .subscribe-input {
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    /* width: 264px; */
+    width: 288px;
     height: 40px;
     background-color: transparent;
     padding: 8px 16px;
@@ -521,6 +527,7 @@ img {
     cursor: pointer;
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 auto;
 }
 
 .subscribe-btn:hover,
@@ -781,6 +788,39 @@ img {
     .features-subtitle {
         text-align: left;
     }
+
+    /* --------- Footer --------- */
+
+    .footer-wrapper {
+        padding-right: 164px;
+        padding-left: 108px;
+        gap: 72px 24px;
+        align-items: baseline;
+    }
+
+    .footer-link {
+        text-align: left;
+    }
+
+    .footer-text {
+        max-width: 264px;
+    }
+
+    .social-links-text {
+        text-align: left;
+    }
+
+    .subscribe-text {
+        text-align: left;
+    }
+
+    .subscribe-form {
+        gap: 24px;
+    }
+
+    .subscribe-input {
+        width: 264px;
+    }
 }
 
 @media screen and (min-width: 1158px) {
@@ -818,5 +858,26 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
+    }
+
+    /* --------- Footer --------- */
+
+    .footer {
+        padding: 100px 0;
+    }
+
+    .footer-wrapper {
+        padding-right: 16px;
+        padding-left: 16px;
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+
+    .social-links-container {
+        margin-left: 120px;
+    }
+
+    .footer-subscribe-container {
+        margin-left: auto;
     }
 }
