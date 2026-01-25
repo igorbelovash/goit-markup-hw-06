@@ -39,7 +39,7 @@ img {
 }
 
 .section {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 .section-title {
@@ -192,7 +192,7 @@ img {
         to bottom,
         rgba(46,47,66,0.7),
         rgba(46, 47, 66, 0.7)),
-        url(../images/PeopleOffice.jpg);
+        url(../images/PeopleOffice-mob.jpg);
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,7 +212,6 @@ img {
     letter-spacing: 0.02em;
     color: #fff;
     max-width: 216px;
-    /* margin-bottom: 48px; */
     margin-bottom: 72px;
     text-align: center;
 }
@@ -238,10 +237,6 @@ img {
 }
 
 /* --------- Features Section --------- */
-
-.features {
-    padding: 96px 0;
-}
 
 .features-title {
     text-align: left;
@@ -269,7 +264,6 @@ img {
 
 
 .features-subtitle {
-    /* margin: 8px 0; */
     margin-bottom: 8px;
     font-weight: 700;
     font-size: 36px;
@@ -287,8 +281,14 @@ img {
     color: #434455;
 }
 
+/* --------- Team Section --------- */
+
 .team {
     background-color: #F4F4FD;
+}
+
+.team > .container {
+    max-width: 296px;
 }
 
 .team-title {
@@ -297,12 +297,13 @@ img {
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
 }
 
 .team-item {
     background-color: #fff;
-    width: calc((100% - 72px) / 4);
+    width: 100%;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
@@ -320,7 +321,6 @@ img {
     display:flex;
     gap: 24px;
     margin-top: 8px;
-    /* flex-wrap: wrap; */
 }
 
 .team-social-links-item .social-link {
@@ -480,14 +480,12 @@ img {
     margin-top: 16px;
     display:flex;
     flex-wrap: wrap;
-    /* gap: 24px; */
     gap: 16px;
 }
 
 .subscribe-input {
     border: 1px solid #fff;
     border-radius: 4px;
-    /* width: 264px; */
     width: 288px;
     height: 40px;
     background-color: transparent;
@@ -782,6 +780,11 @@ img {
 
     .hero {
         padding: 112px 0;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+            url(../images/PeopleOffice-tab.jpg);
     }
 
     .hero-title {
@@ -805,6 +808,20 @@ img {
 
     .features-subtitle {
         text-align: left;
+    }
+
+    /* --------- Team Section --------- */
+
+    .team > .container{
+        max-width: 584px;
+    }
+
+    .team-list {
+        gap: 64px 24px;
+    }
+
+    .team-item {
+        width: calc((100% - 24px) / 2);
     }
 
     /* --------- Footer --------- */
@@ -843,7 +860,8 @@ img {
 
 @media screen and (min-width: 1158px) {
 
-    .container {
+    .container,
+    .team > .container {
         max-width: 1158px;
     }
 
@@ -851,6 +869,10 @@ img {
     
     .hero {
         padding: 188px 0;
+        background-image: linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+            url(../images/PeopleOffice.jpg);
     }
     
     .hero-title {
@@ -886,6 +908,16 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
+    }
+
+    /* --------- Team Section --------- */
+
+    .team-list {
+        gap: 24px;
+    }
+
+    .team-item {
+        width: calc((100% - 72px) / 4);
     }
 
     /* --------- Footer --------- */
